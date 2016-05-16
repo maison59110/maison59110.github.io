@@ -3647,17 +3647,24 @@
 		}
 
 /* Main */
+		#background-img {
+		position: fixed;
+		top:0px;
+		bottom: 0px;
+		left:0px;
+		right: 0px;
+		width: 100vw;
+		height: 100vh;
+		z-index: -7000;
+		text-decoration: center;
+		background: url(../../images/background.jpg) no-repeat center fixed;
+  	-webkit-background-size: cover;
+  	background-size: cover;
+	}
+
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/16_terrasse_050.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/16_terrasse_050.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/16_terrasse_050.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/16_terrasse_050.jpg");
-		background-attachment: fixed;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		text-align: center;
 	}
 
@@ -3866,6 +3873,9 @@
     text-align: right;
     font-weight: bold;
 }
+.charge::after{
+		content: ' :';
+}
 .charge-val {
     width: 14em;
     display: inline-block;
@@ -3891,6 +3901,26 @@
     display: inline-block;
     width: 21em;
     font-weight: bold;
+}
+@media screen and (max-width: 736px) {
+	ul.choix, ul.choix li {
+		width: 100%;
+		padding: 0px;
+	}
+	.charge, .charge-val,
+	.contact, .contact-val {
+    width: 100%;
+    display: block;
+    text-align: center;
+	}
+	.charge::after,
+	.contact::after {
+		content: '';
+	}
+	.prix {
+		display: inline;
+		width: auto;
+	}
 }
 #map-canvas {
 	display: inline-block;
