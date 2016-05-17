@@ -7,5 +7,5 @@ var v = new Vue({
 })
 
 window.addEventListener('scroll', function(e) {
-    v.hideheader = (document.body.scrollTop < window.innerHeight);
+    v.hideheader = (document.body.scrollTop < document.getElementById('descriptif').offsetTop);
 });
