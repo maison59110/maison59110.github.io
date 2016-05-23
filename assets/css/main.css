@@ -3912,6 +3912,13 @@
   border: 1em solid rgba(1,1,1,.1);
 }
 
+.inner.energie {
+	margin-top: 2em;
+}
+img.energie {
+	width: 100%;
+}
+
 /* ============ iPad fix =============== */
 /**
  * iPad with portrait orientation.
